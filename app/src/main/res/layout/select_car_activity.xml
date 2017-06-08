@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+    <RelativeLayout
+        android:id="@+id/rel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/transition">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/car_colour"
+            android:id="@+id/pick_car"
+            android:textSize="40sp"
+            android:layout_marginTop="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blue"
+            android:id="@+id/button"
+            android:width="110dp"
+            android:height="20dp"
+            android:textSize="15sp"
+            android:background="@drawable/button_blue"
+            android:layout_marginTop="34dp"
+            android:layout_below="@+id/pick_car"
+            android:layout_alignLeft="@+id/pick_car"
+            android:layout_alignStart="@+id/pick_car" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/red"
+            android:id="@+id/button2"
+            android:width="110dp"
+            android:height="20dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_red"
+            android:layout_below="@+id/button"
+            android:layout_alignLeft="@+id/button"
+            android:layout_alignStart="@+id/button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/green"
+            android:id="@+id/button3"
+            android:width="110dp"
+            android:height="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:background="@drawable/button_green"
+            android:layout_below="@+id/button2"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignStart="@+id/button2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toothpaste"
+            android:id="@+id/button5"
+            android:width="110dp"
+            android:height="20dp"
+            android:textSize="15sp"
+            android:background="@drawable/button_toothpaste"
+            android:layout_alignTop="@+id/button"
+            android:layout_alignRight="@+id/pick_car"
+            android:layout_alignEnd="@+id/pick_car" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pokeball"
+            android:id="@+id/button6"
+            android:width="110dp"
+            android:height="20dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_pokeball"
+            android:layout_above="@+id/button3"
+            android:layout_alignLeft="@+id/button5"
+            android:layout_alignStart="@+id/button5" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/herbie"
+            android:id="@+id/button7"
+            android:width="110dp"
+            android:height="20dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_herbie"
+            android:layout_below="@+id/button6"
+            android:layout_alignLeft="@+id/button6"
+            android:layout_alignStart="@+id/button6" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/black"
+            android:id="@+id/button8"
+            android:width="110dp"
+            android:height="20dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_black"
+            android:layout_below="@+id/button3"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fire"
+            android:background="@drawable/button_fire"
+            android:id="@+id/button9"
+            android:width="110dp"
+            android:height="20dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/button7"
+            android:layout_alignLeft="@+id/button7"
+            android:layout_alignStart="@+id/button7" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/random"
+            android:id="@+id/random"
+            android:width="110dp"
+            android:height="20dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_black"
+            android:layout_below="@+id/button8"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</LinearLayout>

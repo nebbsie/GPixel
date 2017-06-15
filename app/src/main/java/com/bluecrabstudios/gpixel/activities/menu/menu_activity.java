@@ -1,4 +1,4 @@
-package com.bluecrabstudios.gpixel.activities;
+package com.bluecrabstudios.gpixel.activities.menu;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.bluecrabstudios.gpixel.R;
+import com.bluecrabstudios.gpixel.activities.account.account_activity;
+import com.bluecrabstudios.gpixel.activities.play.select_car_activity;
 
 public class menu_activity extends Activity {
 
@@ -87,7 +89,9 @@ public class menu_activity extends Activity {
         myAccount.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-
+                Intent i = new Intent();
+                i.setClass(getApplicationContext(), account_activity.class);
+                startActivity(i);
             }
         });
 

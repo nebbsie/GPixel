@@ -1,4 +1,4 @@
-package com.bluecrabstudios.gpixel.activities;
+package com.bluecrabstudios.gpixel.activities.play;
 
 import android.app.Activity;
 import android.graphics.drawable.TransitionDrawable;

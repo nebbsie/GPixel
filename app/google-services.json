@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1028624843993",
+    "firebase_url": "https://gpixel-b7490.firebaseio.com",
+    "project_id": "gpixel-b7490",
+    "storage_bucket": "gpixel-b7490.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028624843993:android:574db4c333f871ae",
+        "android_client_info": {
+          "package_name": "jifa.racecarsandstuff"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028624843993-0i7vdd59hnagsic7acavj9dmgg3db2ei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jifa.racecarsandstuff",
+            "certificate_hash": "3da738523e3002f2daff6b9b94e3e54700eb63d9"
+          }
+        },
+        {
+          "client_id": "1028624843993-sv6v3lsqqah7uopf5sir39rt0a2911vm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHzd0oaQxBqcQodZoukgcGrxm989XthqI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028624843993-sv6v3lsqqah7uopf5sir39rt0a2911vm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028624843993:android:2a228e6e574a6790",
+        "android_client_info": {
+          "package_name": "com.bluecrabstudios.gpixel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028624843993-deva72s8jm5mqtacrdoolmd9fr36f6f4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bluecrabstudios.gpixel",
+            "certificate_hash": "1b5dfaa718f6d75e2234921f5f47322ace6d3786"
+          }
+        },
+        {
+          "client_id": "1028624843993-sv6v3lsqqah7uopf5sir39rt0a2911vm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHzd0oaQxBqcQodZoukgcGrxm989XthqI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028624843993-sv6v3lsqqah7uopf5sir39rt0a2911vm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,10 +2,6 @@ package com.bluecrabstudios.gpixel.objects;
 
 import java.io.Serializable;
 
-/**
- * Created by aaronnebbs on 20/06/2017.
- */
-
 public class User implements Serializable {
     private String username;
     private String password;
@@ -13,9 +9,6 @@ public class User implements Serializable {
     private String EXTERNAL_TYPE;
     private String EXTERNAL_ID;
     private String ID;
-
-    public User(){}
-
 
 
     public String getUsername() {

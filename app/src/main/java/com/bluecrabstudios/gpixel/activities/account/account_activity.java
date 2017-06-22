@@ -30,15 +30,10 @@ public class account_activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.account_activity);
 
+        // Login section
         username = (EditText) findViewById(R.id.usernameInput);
         password = (EditText) findViewById(R.id.passwordInput);
         loginButton = (Button) findViewById(R.id.loginButton);
-
-        createEmail = (EditText) findViewById(R.id.createEmailInput);
-        createUsername = (EditText) findViewById(R.id.createUsernameInput);
-        createPassword1 = (EditText) findViewById(R.id.createPassword1);
-        createPassword2 = (EditText) findViewById(R.id.createPassword2);
-        createRegisterButton = (Button) findViewById(R.id.createRegisterButton);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +42,13 @@ public class account_activity extends Activity {
                 System.out.println(u.getEmail());
             }
         });
+
+        // Register section
+        createEmail = (EditText) findViewById(R.id.createEmailInput);
+        createUsername = (EditText) findViewById(R.id.createUsernameInput);
+        createPassword1 = (EditText) findViewById(R.id.createPassword1);
+        createPassword2 = (EditText) findViewById(R.id.createPassword2);
+        createRegisterButton = (Button) findViewById(R.id.createRegisterButton);
 
         createRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +59,5 @@ public class account_activity extends Activity {
                 }
             }
         });
-
     }
 }

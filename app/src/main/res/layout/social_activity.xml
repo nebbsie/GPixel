@@ -24,13 +24,13 @@
         android:windowSoftInputMode="adjustResize"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.47">
 
         <EditText
             android:id="@+id/searchFriendField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:hint="enter friends name"
             android:inputType="textPersonName"
@@ -45,10 +45,42 @@
             android:textAlignment="center" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="367dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/allScrollList"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchUserField"
+        tools:layout_editor_absoluteY="50dp">
+
+        <TextView
+            android:id="@+id/pendingAmountView"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.93"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/viewPendingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Pending"
+            android:visibility="invisible" />
+    </LinearLayout>
+
     <ScrollView
         android:id="@+id/allScrollList"
-        android:layout_width="362dp"
-        android:layout_height="433dp"
+        android:layout_width="339dp"
+        android:layout_height="372dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -56,10 +88,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchUserField">
+        app:layout_constraintTop_toBottomOf="@+id/searchUserField"
+        app:layout_constraintVertical_bias="0.746">
 
         <RelativeLayout
             android:id="@+id/layoutBase"

@@ -24,11 +24,15 @@ public class social_activity extends AppCompatActivity {
     private Button searchUsers;
     private LinearLayout LL;
 
+    private TextView pendingAmount;
+    private Button viewPendingButton;
+    private int pending;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.social_activity);
-
 
 
         // Setups the shared preferences.
@@ -39,8 +43,6 @@ public class social_activity extends AppCompatActivity {
 
         // Sets the list to all of the users.
         populateUserList(UserHandler.getAllUsers());
-
-
 
 
     }
@@ -65,6 +67,31 @@ public class social_activity extends AppCompatActivity {
                 }
             }
         });
+
+
+        pendingAmount = (TextView) findViewById(R.id.pendingAmountView);
+        viewPendingButton = (Button) findViewById(R.id.viewPendingButton);
+        viewPendingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        String name = prefs.getString("username", "NULL");
+
+        if(!name.equals("NULL")){
+            pending = FriendHandler.getPendingAmount(name);
+            if(pending > 0){
+                pendingAmount.setVisibility(View.VISIBLE);
+                pendingAmount.setText(pending + " pending requests.");
+                viewPendingButton.setVisibility(View.VISIBLE);
+            }else{
+                pendingAmount.setVisibility(View.INVISIBLE);
+                viewPendingButton.setVisibility(View.INVISIBLE);
+            }
+        }
+
+
     }
 
     private void populateUserList(ArrayList<User> users){

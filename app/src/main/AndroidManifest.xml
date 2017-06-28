@@ -16,8 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".activities.play.select_car_activity" />
-        <activity android:name=".activities.account.account_activity"></activity>
+        <activity android:name=".activities.account.account_activity" />
+        <activity android:name=".activities.account.view_scores" />
+        <activity
+            android:name=".social_activity"
+            android:windowSoftInputMode="adjustPan" />
+
     </application>
 
 </manifest>

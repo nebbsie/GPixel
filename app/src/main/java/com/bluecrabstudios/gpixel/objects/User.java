@@ -8,8 +8,15 @@ public class User implements Serializable {
     private String email;
     private String EXTERNAL_TYPE;
     private String EXTERNAL_ID;
-    private String ID;
+    private int ID;
 
+
+    public User(){}
+
+    public User(String username, int id){
+        this.username = username;
+        this.ID = id;
+    }
 
     public String getUsername() {
         return username;
@@ -51,11 +58,11 @@ public class User implements Serializable {
         this.EXTERNAL_ID = EXTERNAL_ID;
     }
 
-    public String getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 }

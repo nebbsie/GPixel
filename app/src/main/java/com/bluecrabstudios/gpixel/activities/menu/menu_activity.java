@@ -14,7 +14,9 @@ import android.widget.RelativeLayout;
 
 import com.bluecrabstudios.gpixel.R;
 import com.bluecrabstudios.gpixel.activities.account.account_activity;
+import com.bluecrabstudios.gpixel.activities.account.view_scores;
 import com.bluecrabstudios.gpixel.activities.play.select_car_activity;
+import com.bluecrabstudios.gpixel.social_activity;
 
 public class menu_activity extends Activity {
 
@@ -73,7 +75,9 @@ public class menu_activity extends Activity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent();
+                i.setClass(getApplicationContext(), social_activity.class);
+                startActivity(i);
             }
         });
 
@@ -81,7 +85,9 @@ public class menu_activity extends Activity {
         highScores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent();
+                i.setClass(getApplicationContext(), view_scores.class);
+                startActivity(i);
             }
         });
 

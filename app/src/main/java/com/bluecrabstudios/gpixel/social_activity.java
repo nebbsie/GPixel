@@ -57,6 +57,8 @@ public class social_activity extends AppCompatActivity {
     }
 
     private void setupUI(){
+        final String name = prefs.getString("username", "NULL");
+
         usernameSearch = (EditText) findViewById(R.id.searchFriendField);
         searchUsers = (Button) findViewById(R.id.searchFriendButton);
         searchUsers.setOnClickListener(new View.OnClickListener() {
@@ -74,24 +76,29 @@ public class social_activity extends AppCompatActivity {
         viewPendingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                RelativeLayout rl = (RelativeLayout) findViewById(R.id.layoutBase);
+                rl.removeAllViews();
+                populateUserList(FriendHandler.getPendingAmount(name));
             }
         });
-        String name = prefs.getString("username", "NULL");
+
 
         if(!name.equals("NULL")){
-            pending = FriendHandler.getPendingAmount(name);
-            if(pending > 0){
-                pendingAmount.setVisibility(View.VISIBLE);
-                pendingAmount.setText(pending + " pending requests.");
-                viewPendingButton.setVisibility(View.VISIBLE);
-            }else{
-                pendingAmount.setVisibility(View.INVISIBLE);
-                viewPendingButton.setVisibility(View.INVISIBLE);
+
+            ArrayList<User> users = FriendHandler.getPendingAmount(name);
+            pending = users.size();
+
+            if(users != null){
+                if(pending > 0){
+                    pendingAmount.setVisibility(View.VISIBLE);
+                    pendingAmount.setText(pending + " pending requests.");
+                    viewPendingButton.setVisibility(View.VISIBLE);
+                }else{
+                    pendingAmount.setVisibility(View.INVISIBLE);
+                    viewPendingButton.setVisibility(View.INVISIBLE);
+                }
             }
         }
-
-
     }
 
     private void populateUserList(ArrayList<User> users){

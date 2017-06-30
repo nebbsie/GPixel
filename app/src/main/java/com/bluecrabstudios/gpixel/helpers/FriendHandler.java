@@ -45,7 +45,7 @@ public class FriendHandler {
         return false;
     }
 
-    public static int getPendingAmount(String username){
+    public static ArrayList<User> getPendingAmount(String username){
         try {
             GPixelParams params = new GPixelParams(new URL("http://192.168.1.12/gpixel/friends/getPending"));
             params.put("username", username);
@@ -53,12 +53,19 @@ public class FriendHandler {
             JSONObject obj = api.execute().get();
 
             JSONArray arr = obj.getJSONArray("data");
+            ArrayList<User> users = new ArrayList<>();
+
 
             if(obj.getBoolean("success")){
-                return arr.length();
-            }else{
-                return 0;
+                for(int i = 0; i < arr.length(); i++){
+                    JSONObject o = arr.getJSONObject(i);
+
+                    users.add(new User("YOKO",o.getInt("user1ID")));
+                }
             }
+
+
+            return users;
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -69,7 +76,7 @@ public class FriendHandler {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return 0;
+        return null;
     }
 
 

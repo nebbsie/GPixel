@@ -77,20 +77,9 @@
             android:background="@drawable/button_black"
             android:text="Account"
             android:textColor="@android:color/white"
-            android:layout_above="@+id/textView"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/credit"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/white"
-            android:textSize="17sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignLeft="@+id/about"
-            android:layout_alignStart="@+id/about" />
+            android:layout_below="@+id/about"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
 
         <TextView
             android:id="@+id/textView2"

@@ -18,6 +18,55 @@ import java.util.concurrent.ExecutionException;
 
 public class FriendHandler {
 
+    public static boolean accept(int id){
+        try {
+            GPixelParams params = new GPixelParams(new URL("http://192.168.1.12/gpixel/friends/accept"));
+            params.put("friendLinkID", Integer.toString(id));
+            GPixelAPI api = new GPixelAPI(params);
+            JSONObject obj = api.execute().get();
+
+            if(obj.getBoolean("success")){
+                return true;
+            }else{
+                return false;
+            }
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static boolean deny(int id){
+        try {
+            GPixelParams params = new GPixelParams(new URL("http://192.168.1.12/gpixel/friends/block"));
+            params.put("friendLinkID", Integer.toString(id));
+            GPixelAPI api = new GPixelAPI(params);
+            JSONObject obj = api.execute().get();
+
+            if(obj.getBoolean("success")){
+                return true;
+            }else{
+                return false;
+            }
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     public static boolean sendFriendRequest(int id){
         try {
@@ -52,15 +101,16 @@ public class FriendHandler {
             GPixelAPI api = new GPixelAPI(params);
             JSONObject obj = api.execute().get();
 
-            JSONArray arr = obj.getJSONArray("data");
+
             ArrayList<User> users = new ArrayList<>();
 
 
             if(obj.getBoolean("success")){
+                JSONArray arr = obj.getJSONArray("data");
                 for(int i = 0; i < arr.length(); i++){
                     JSONObject o = arr.getJSONObject(i);
 
-                    users.add(new User("YOKO",o.getInt("user1ID")));
+                    users.add(new User(o.getString("username"),o.getInt("friendLinkID")));
                 }
             }
 
